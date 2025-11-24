@@ -1,26 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-    <!-- CSS Refs -->
-    <link type="text/css" href="css/styles.css" rel="stylesheet"/>
-
-    <!-- Title -->
-    <title>Design Project</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>Stories From Myanmar</title>
 </head>
-
 <body>
-    <!-- Content -->
-    <h1>Project Page</h1>
-    <p>This is a simple page.</p>
-    
 
-    <!-- Script -->
-    <script src="js/script.js"></script>
+    <!-- STICKY NAVBAR -->
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                    </svg>
+                </a>
+            </li>
+            <li><a href="#pageBody">Stories</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="sources.html">Sources</a></li>
+        </ul>
+
+        <ul class="nav-links">
+            <li class="hideOnMobile"><a href="#pageBody">Stories</a></li>
+            <li class="hideOnMobile"><a href="history.html">History</a></li>
+            <li class="hideOnMobile"><a href="sources.html">Sources</a></li>
+            <li class="menuButton" onclick="showSidebar()">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- PAGE CONTENT -->
+    <div class="pageContent" >
+        <div class="home">
+
+            <div class="myanmarMap">
+                <img src="./images/Myanmar.png" alt="Myanmar map">
+            </div>
+            <div class="stories">
+                <h1>STORIES<span>FROM</span>MYANMAR<span class="name">Ryan Javier</span></h1>
+            </div>
+
+        </div>
+
+        <div class="storiesSection">
+            <div class="container" id="pageBody">
+                <section>
+                        <div class="col-left" onclick="goToSoldier()" style="cursor:pointer;"><img src="images/ArmyGuy.png" alt="The Soldier">
+                            <div class="overlay">
+                                <p>The Soldier</p>
+                            </div>
+                        </div>
+                    <div class="col-right right-section">
+                        <div class="right-top" onclick="goToConscript()" style="cursor:pointer;"><img src="images/KhooTuLor.png" alt="The Conscript">
+                            <div class="overlay">
+                                <p>The Conscript</p>
+                            </div>
+                        </div>
+                        <div class="right-bottom" onclick="goToWife()" style="cursor:pointer;"><img src="images/Women.png" alt="The Wife">
+                            <div class="overlay">
+                                <p>The Wife</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="container second">
+                <section>
+                    <div class="col-left">
+                        <div class="bottom-right-top" onclick="goToActivist()" style="cursor:pointer;"><img src="images/Activist.png" alt="The Activist">
+                            <div class="overlay">
+                                <p>The Activist</p>
+                            </div>
+                        </div>
+                        <div class="bottom-right-bottom">
+                            <div class="bottom-right-bottom-left" onclick="goToTeacher()" style="cursor:pointer;"><img src="images/Teacher.png" alt="The Teacher">
+                                <div class="overlay">
+                                    <p>The Teacher</p>
+                                </div>
+                            </div>
+                            <div class="bottom-right-bottom-right" onclick="goToJournalist()" style="cursor:pointer;"><img src="images/Journalisy.png" alt="The Journalist">
+                                <div class="overlay">
+                                    <p>The Journalist</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-right" onclick="goToMother()" style="cursor:pointer;">
+                        <img src="images/women1.png" alt="The Mother">
+                        <div class="overlay">
+                            <p>The Mother</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
 </body>
-
 </html>

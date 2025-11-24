@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-size: 17px;
+    margin: 0;
+    align-items: center;
+  }
+  
+  .grid-container {
+    padding-top: 20px;
+    display: grid;
+    gap: 10px;
+    margin: 0 auto;
+  
+    /* Mobile layout */
+    grid-template-areas:
+      "header"
+      "profile"
+      "name"
+      "quote"
+      "content"
+      "quote2"
+      "image"
+      "content2";
+  }
+
+h1, h2 {
+    font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 300;
+}
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+}
+
+  .profile {
+    padding: 0;
+    border-radius: 2em;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;           
+    background-image: url(../images/ArmyGuy.png);
+    place-self: center;
+  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+
+  
+  /* match your HTML div classes */
+  .header  { grid-area: header; background: purple; color: white; text-align: center; padding: 10px; }
+  .profile {
+    grid-area: profile;
+    padding: 0;
+    border-radius: 2em;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;           
+    background-image: url(../images/ArmyGuy.png);
+    width: 80%;
+    max-width: 400px;
+  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .name    { 
+        grid-area: name;
+        padding: 10px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+  .quote   { 
+        grid-area: quote; 
+        padding: 10px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+    }
+  
+    .content { 
+      grid-area: content; 
+      padding: 20px; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; 
+      
+      /* font */
+      font-family: "Darker Grotesque", sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+  }
+
+  .content2 { 
+    grid-area: content2; 
+    padding: 40px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    
+    /* font */
+    font-family: "Darker Grotesque", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.quote2 {
+  grid-area: quote2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.image {
+  margin: 0;
+  grid-area: image;
+}
+
+.image img {
+  max-width: 90vw;
+}
+
+.nav-container {
+  display: flex;           /* make it a flex container */
+  justify-content: center; /* center its child horizontally */
+}
+
+.back-nav {
+  margin: 20px 0 0 0 !important; /* remove left margin for mobile */
+}
+
+  @media (min-width: 700px) {
+    .grid-container {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas:
+        "header header header header header header"
+        "profile profile profile name name name"
+        "quote quote quote quote quote quote"
+        "content content content content content content"
+        "quote2 quote2 quote2 quote2 quote2 quote2"
+        "image image image image image image"
+        "content2 content2 content2 content2 content2 content2";
+
+        width: 700px;
+    }
+    .nav-container {
+      width: 540px;
+      display: block;
+    }
+  
+    .back-nav {
+      margin: 20px 0 0 20px !important;
+      width: fit-content !important;
+      background-color: white;
+      border-radius: 25px;
+  }
+
+  .name {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .quote, .quote2 {
+    font-size: 35px;
+  }
+
+  .content, .content2 {
+    font-size: 28px;
+    padding: 0;
+  }
+
+  .smallNav {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 1em;
+    width: 50vw;
+  }
+
+  .navItem {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  }
+
+  .smallNav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    width: 50vw;
+  }
+  
+  .navItem {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .navItem:hover {
+    opacity: 65%;
+  }
+
+.conscript {
+    background-image: url(../images/KhooTuLor.png);
+}
+
+.teacher {
+    background-image: url(../images/teacher.png);
+}
+
+.mother {
+    background-image: url(../images/women1.png);
+}
+
+.activist {
+    background-image: url(../images/Activist.png);
+}
+
+.journalist {
+    background-image: url(../images/Journalisy.png);
+}
+
+.wife {
+    background-image: url(../images/Women.png);
+}
+
+.soldier {
+    background-image: url(../images/ArmyGuy.png);
+}
