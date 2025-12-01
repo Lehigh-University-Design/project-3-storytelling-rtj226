@@ -34,3 +34,30 @@ function goToJournalist() {
 function goToActivist() {
     window.location.href = "storyPages/activist.html"
 }
+
+// Timeline indicator scroll functionality
+const sections = document.querySelectorAll('.history-section');
+const timelineDots = document.querySelectorAll('.timeline-dot');
+
+function updateTimeline() {
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            const year = section.getAttribute('data-year');
+            
+            // Update active dot
+            timelineDots.forEach(dot => dot.classList.remove('active'));
+            const activeDot = document.querySelector(`.timeline-dot[data-year="${year}"]`);
+            if (activeDot) {
+                activeDot.classList.add('active');
+            }
+        }
+    });
+}
+
+window.addEventListener('scroll', updateTimeline);
+window.addEventListener('load', updateTimeline);

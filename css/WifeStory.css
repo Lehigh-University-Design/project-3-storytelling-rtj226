@@ -24,7 +24,10 @@
       "content"
       "quote2"
       "image"
-      "content2";
+      "image1"
+      "image2"
+      "content2"
+      "quote3";
   }
 
 h1, h2 {
@@ -49,7 +52,7 @@ h3 {
     border-radius: 2em;
     aspect-ratio: 1 / 1;
     overflow: hidden;           
-    background-image: url(../images/ArmyGuy.png);
+    background-image: url(../images/Journalisy.png);
     place-self: center;
   
     background-size: cover;
@@ -67,7 +70,7 @@ h3 {
     border-radius: 2em;
     aspect-ratio: 1 / 1;
     overflow: hidden;           
-    background-image: url(../images/ArmyGuy.png);
+    background-image: url(../images/Journalisy.png);
     width: 80%;
     max-width: 400px;
   
@@ -133,12 +136,30 @@ h3 {
 .image {
   margin: 0;
   grid-area: image;
-  display: flex;
-  justify-content: center;
 }
 
-.image img {
-  max-width: 90vw;
+.image1 {
+  margin: 0;
+  grid-area: image1;
+}
+
+.image2 {
+  margin: 0;
+  grid-area: image2;
+}
+
+.image img, .image1 img, .image2 img {
+  max-width: 20vw;
+}
+
+
+.quote3 {
+  grid-area: quote3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  font-size: 40px;
 }
 
 .nav-container {
@@ -159,8 +180,9 @@ h3 {
         "quote quote quote quote quote quote"
         "content content content content content content"
         "quote2 quote2 quote2 quote2 quote2 quote2"
-        "image image image image image image"
-        "content2 content2 content2 content2 content2 content2";
+        "image image image1 image1 image2 image2"
+        "content2 content2 content2 content2 content2 content2"
+        "quote3 quote3 quote3 quote3 quote3 quote3";
 
         width: 700px;
     }
